@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'routes/app_routes.dart';
+import 'routes/routes_name.dart';
 import 'src/pages/splash_screen/splash_view.dart';
 import 'theme/theme.dart';
 
@@ -14,6 +16,8 @@ class PayFlow extends StatelessWidget {
       theme: buildLightThemeData(context),
       darkTheme: buildDarkThemeData(context),
       themeMode: ThemeMode.system,
+      initialRoute: AppRoutesName.splashScreen,
+      getPages: AppRoutes.appRoutes(), 
       home: SplashView(),
     );
   }
